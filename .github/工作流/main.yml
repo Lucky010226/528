@@ -1,17 +1,17 @@
 name: weixin
 on:
-  .github/工作流:
-  schedule: 
+  workflow_dispatch:
+  schedule:
     # 代表国际标准时间23点0分，北京时间需要+8小时，代表北京时间上午7点运行
-    - cron: '0 23 * * *'
-jobs: 
-#将工作流程中运行的所有作业组合在一起
+    - cron: "0 23 * * *"
+jobs:
+  #将工作流程中运行的所有作业组合在一起
   build:
-  #定义名为 build 的作业。 子键将定义作业的属性 
-    runs-on: ubuntu-latest 
+    #定义名为 build 的作业。 子键将定义作业的属性
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-    
+s
       - name: Set up Python 3.12
         uses: actions/setup-python@v2
         with:
